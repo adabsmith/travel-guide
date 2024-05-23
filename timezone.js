@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const apiKey = '3eb75b2c672c458eb10ecd09f0ee3637';
 
     // Pre-defined major cities
-    const majorCities = ['New York', 'London', 'Tokyo', 'Sydney'];
+    const majorCities = [ 'London', 'Tokyo', 'Sydney'];
     majorCities.forEach(city => {
         fetch(`https://timezone.abstractapi.com/v1/current_time/?api_key=${apiKey}&location=${encodeURIComponent(city)}`)
             .then(response => response.json())
@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.error) {
                     result.textContent = 'Error fetching time data. Please check the city name.';
                 } else {
+                    const br=document.createElement('br');
                     result.textContent = `Current time in ${data.timezone_location}: ${data.datetime}`;
                 }
             })
