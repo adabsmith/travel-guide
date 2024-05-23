@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Essentials</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Travel Essentials</h1>
+            <nav>
+                <ul>
+                    <li><a href="#currency">Currency Converter</a></li>
+                    <li><a href="#weather">Weather Report</a></li>
+                    <li><a href="#timezone">Timezone Info</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Welcome to Travel Essentials</h2>
+                <p>Your one-stop solution for all travel needs: currency conversion, weather updates, and timezone information.</p>
+                <a href="#currency" class="btn">Get Started</a>
+            </div>
+        </section>
+
+        <section id="currency">
+            <div class="container">
+                <h2>Currency Converter</h2>
+                <form id="currencyForm">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" required>
+                    <label for="fromCurrency">From:</label>
+                    <select id="fromCurrency" name="fromCurrency"></select>
+                    <label for="toCurrency">To:</label>
+                    <select id="toCurrency" name="toCurrency"></select>
+                    <button type="submit" class="btn">Convert</button>
+                </form>
+                <div id="currencyResult"></div>
+            </div>
+        </section>
+
+        <section id="weather">
+            <div class="container">
+                <h2>Weather Report</h2>
+                <form id="weatherForm">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                    <button type="submit" class="btn">Get Weather</button>
+                </form>
+                <div id="weatherResult"></div>
+            </div>
+        </section>
+
+        <section id="timezone">
+            <div class="container">
+                <h2>Timezone Info</h2>
+                <ul id="timezones">
+                    <!-- List of major cities with their current time -->
+                </ul>
+                <form id="timezoneForm">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                    <button type="submit" class="btn">Get Time</button>
+                </form>
+                <div id="timezoneResult"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Travel Essentials</p>
+            <p>Contact: info@travelessentials.com</p>
+        </div>
+    </footer>
+    <script src="currency.js"></script>
+    <script src="weather.js"></script>
+    <script src="timezone.js"></script>
+</body>
+</html>

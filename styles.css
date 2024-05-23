@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 10px;
+    min-height: 70px;
+    border-bottom: #77d9a8 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header ul li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+/* Hero Section */
+#hero {
+    background: #77d9a8;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#hero .btn {
+    background: #fff;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#hero .btn:hover {
+    background: #444;
+    color: #fff;
+}
+
+/* Section Styles */
+section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+form button.btn {
+    background: #77d9a8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button.btn:hover {
+    background: #444;
+}
+
+/* Results Styles */
+#currencyResult, #weatherResult, #timezoneResult {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
