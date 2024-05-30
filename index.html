@@ -14,6 +14,7 @@
                     <li><a href="#currency">Currency Converter</a></li>
                     <li><a href="#weather">Weather Report</a></li>
                     <li><a href="#timezone">Timezone Info</a></li>
+                    <li><a href="#news">Travel News</a></li>
                 </ul>
             </nav>
         </div>
@@ -23,7 +24,9 @@
             <div class="container">
                 <!-- <img src="background.png" alt=""> -->
                 <h2>Discover Your Next Adventure with Ease.</h2>
-                <p>We simplify every aspect of your journey for your convenience. Say goodbye to currency conversion woes with our real-time exchange rate tool, ensuring you always know the exact value of your money no matter where you go. Stay ahead of the weather with accurate forecasts tailored to your destination, helping you pack and plan activities with confidence. Plus, our timezone feature keeps you in sync with local time, making sure you never miss a beat during your travels. Exploring the world has never been easier.</p>
+                <p>
+                    We simplify every aspect of your journey for your convenience. Say goodbye to currency conversion woes with our real-time exchange rate tool, ensuring you always know the exact value of your money no matter where you go. Stay ahead of the weather with accurate forecasts tailored to your destination, helping you pack and plan activities with confidence. Plus, our timezone feature keeps you in sync with local time, making sure you never miss a beat during your travels. Exploring the world has never been easier.
+                </p>
                 <a href="#currency" class="btn">Get Started</a>
             </div>
         </section>
@@ -34,10 +37,13 @@
                 <form id="currencyForm">
                     <label for="amount">Amount:</label>
                     <input type="number" id="amount" name="amount" required>
+                    
                     <label for="fromCurrency">From:</label>
                     <select id="fromCurrency" name="fromCurrency"></select>
+                    
                     <label for="toCurrency">To:</label>
                     <select id="toCurrency" name="toCurrency"></select>
+                    
                     <button type="submit" class="btn">Convert</button>
                 </form>
                 <div id="currencyResult"></div>
@@ -52,7 +58,7 @@
                     <input type="text" id="city" name="city" required>
                     <button type="submit" class="btn">Get Weather</button>
                 </form>
-                <div id="weatherResult"></div>
+                <div id="weatherResult" class="weather-card"></div>
             </div>
         </section>
 
@@ -70,6 +76,18 @@
                 <div id="timezoneResult"></div>
             </div>
         </section>
+
+        <section id="news">
+            <div class="container">
+                <h2>Travel News</h2>
+                <form id="newsSearchForm">
+                    <label for="newsSearch">Search News:</label>
+                    <input type="text" id="newsSearch" name="newsSearch" required>
+                    <button type="submit" class="btn">Search</button>
+                </form>
+                <div id="newsContainer" class="news-container"></div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="container">
@@ -80,5 +98,6 @@
     <script src="currency.js"></script>
     <script src="weather.js"></script>
     <script src="timezone.js"></script>
+    <script src="news.js"></script>
 </body>
 </html>
