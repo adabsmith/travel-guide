@@ -1,19 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const timezones = document.getElementById('timezones');
+    const timezoneCardsContainer = document.getElementById('timezoneCardsContainer');
     const form = document.getElementById('timezoneForm');
     const result = document.getElementById('timezoneResult');
 
     const apiKey = '3eb75b2c672c458eb10ecd09f0ee3637';
 
     // Pre-defined major cities
-    const majorCities = [ 'London', 'Tokyo', 'Sydney'];
+    const majorCities = ['London', 'Tokyo', 'Sydney'];
     majorCities.forEach(city => {
         fetch(`https://timezone.abstractapi.com/v1/current_time/?api_key=${apiKey}&location=${encodeURIComponent(city)}`)
             .then(response => response.json())
             .then(data => {
-                const li = document.createElement('li');
-                li.textContent = `${data.timezone_location}: ${data.datetime}`;
-                timezones.appendChild(li);
+                createTimezoneCard(data);
             })
             .catch(error => {
                 console.error('Error fetching time data:', error);
@@ -24,14 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const city = document.getElementById('city').value;
 
-        fetch(`https://timezone.abstractapi.com/v1/current_time/?api_key=${apiKey}&location=london`)
+        fetch(`https://timezone.abstractapi.com/v1/current_time/?api_key=${apiKey}&location=${encodeURIComponent(city)}`)
             .then(response => response.json())
             .then(data => {
                 if (data.error) {
                     result.textContent = 'Error fetching time data. Please check the city name.';
                 } else {
-                    const br=document.createElement('br');
-                    result.textContent = `Current time in ${data.timezone_location}: ${data.datetime}`;
+                    result.innerHTML = ''; // Clear previous results
+                    createTimezoneCard(data);
                 }
             })
             .catch(error => {
@@ -39,4 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Error fetching time data:', error);
             });
     });
+
+    function createTimezoneCard(data) {
+        const card = document.createElement('div');
+        card.classList.add('timezone-card');
+
+        const cityElement = document.createElement('h3');
+        cityElement.textContent = data.timezone_location;
+        card.appendChild(cityElement);
+
+        const time = document.createElement('div');
+        time.classList.add('timezone-info');
+        
+        const icon = document.createElement('div');
+        icon.classList.add('timezone-icon');
+        icon.textContent = '🕒';
+        time.appendChild(icon);
+
+        const duration = document.createElement('div');
+        duration.classList.add('timezone-duration');
+        duration.textContent = data.datetime;
+        time.appendChild(duration);
+
+        card.appendChild(time);
+        timezoneCardsContainer.appendChild(card);
+    }
 });
