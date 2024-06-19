@@ -66,6 +66,22 @@ header .btn:hover {
     background: #5a54e8;
 }
 
+#navButton{
+    background: #6c63ff;
+    color: #fff;
+    padding-top: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    height: 40px;
+    border-style: none;
+    font-size: 16px;
+    margin-left: 200px;
+    margin-top: 14px;
+}
+#navButton:hover {
+    background: #5a54e8;
+}
+
 /* Hero Section */
 #hero {
     text-align: center;
@@ -375,3 +391,5 @@ footer p {
     text-decoration: none;
     border-radius: 5px;
 }
+
+
