@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Essentials</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Travel Essentials</h1>
+            <h2>Travel Essentials</h2>
             <nav>
                 <ul>
                     <li><a href="#currency">Currency Converter</a></li>
@@ -19,83 +20,91 @@
             </nav>
         </div>
     </header>
-    <main>
-        <section id="hero">
-            <div class="container">
-                <!-- <img src="background.png" alt=""> -->
-                <h2>Discover Your Next Adventure with Ease.</h2>
-                <p>
-                    We simplify every aspect of your journey for your convenience. Say goodbye to currency conversion woes with our real-time exchange rate tool, ensuring you always know the exact value of your money no matter where you go. Stay ahead of the weather with accurate forecasts tailored to your destination, helping you pack and plan activities with confidence. Plus, our timezone feature keeps you in sync with local time, making sure you never miss a beat during your travels. Exploring the world has never been easier.
-                </p>
-                <a href="#currency" class="btn">Get Started</a>
-            </div>
-        </section>
+    
+    <section id="hero" data-animate>
+        <div class="container">
+            <!-- <img src="background.png" alt=""> -->
+            <h2>Discover Your Next Adventure with Ease.</h2>
+            <p>
+                We simplify every aspect of your journey for your convenience. Say goodbye to currency conversion woes with our real-time exchange rate tool, ensuring you always know the exact value of your money no matter where you go. Stay ahead of the weather with accurate forecasts tailored to your destination, helping you pack and plan activities with confidence. Plus, our timezone feature keeps you in sync with local time, making sure you never miss a beat during your travels. Exploring the world has never been easier.
+            </p>
+            <a href="#currency" class="btn">Get Started</a>
+        </div>
+    </section>
 
-        <section id="currency">
-            <div class="container">
-                <h2>Currency Converter</h2>
-                <form id="currencyForm">
-                    <label for="amount">Amount:</label>
-                    <input type="number" id="amount" name="amount" required>
-                    
-                    <label for="fromCurrency">From:</label>
-                    <select id="fromCurrency" name="fromCurrency"></select>
-                    
-                    <label for="toCurrency">To:</label>
-                    <select id="toCurrency" name="toCurrency"></select>
-                    
-                    <button type="submit" class="btn">Convert</button>
-                </form>
-                <div id="currencyResult"></div>
-            </div>
-        </section>
+    <section id="currency" class="info-section" data-animate>
+        <div class="container">
+            <h2>Currency Converter</h2>
+            <form id="currencyForm">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+                
+                <label for="fromCurrency">From:</label>
+                <select id="fromCurrency" name="fromCurrency"></select>
+                
+                <label for="toCurrency">To:</label>
+                <select id="toCurrency" name="toCurrency"></select>
+                
+                <button type="submit" class="btn">Convert</button>
+            </form>
+            <div id="currencyResult"></div>
+        </div>
+    </section>
 
-        <section id="weather">
-            <div class="container">
-                <h2>Weather Report</h2>
-                <form id="weatherForm">
-                    <label for="city">City:</label>
-                    <input type="text" id="city" name="city" required>
-                    <button type="submit" class="btn">Get Weather</button>
-                </form>
-                <div id="weatherResult"></div>
-            </div>
-        </section>
+    <section id="weather" class="info-section" data-animate>
+        <div class="container">
+            <h2>Weather Report</h2>
+            <form id="weatherForm">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                <button type="submit" class="btn">Get Weather</button>
+            </form>
+            <div id="weatherResult"></div>
+        </div>
+    </section>
 
-        <section id="timezone">
-            <div class="container">
-                <h2>Timezone Info</h2>
-                <div id="timezoneCardsContainer" class="timezone-cards-container"></div>
-                <form id="timezoneForm">
-                    <label for="city">City:</label>
-                    <input type="text" id="city" name="city" required>
-                    <button type="submit" class="btn">Get Time</button>
-                </form>
-                <div id="timezoneResult"></div>
-            </div>
-        </section>        
-        
-        <section id="news">
-            <div class="container">
-                <h2>Travel News</h2>
-                <form id="newsSearchForm">
-                    <label for="newsSearch">Search News:</label>
-                    <input type="text" id="newsSearch" name="newsSearch" required>
-                    <button type="submit" class="btn">Search</button>
-                </form>
-                <div id="newsContainer" class="news-container"></div>
-            </div>
-        </section>
-    </main>
+    <section id="timezone" data-animate>
+        <div class="container">
+            <h2>Timezone Info</h2>
+            <div id="timezoneCardsContainer" class="timezone-cards-container"></div>
+            <form id="timezoneForm">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                <button type="submit" class="btn">Get Time</button>
+            </form>
+            <div id="timezoneResult"></div>
+        </div>
+    </section>
+
+    <section id="news" data-animate>
+        <div class="container">
+            <h2>Travel News</h2>
+            <form id="newsSearchForm">
+                <label for="newsSearch">Search News:</label>
+                <input type="text" id="newsSearch" name="newsSearch" required>
+                <button type="submit" class="btn">Search</button>
+            </form>
+            <div id="newsContainer" class="news-container"></div>
+        </div>
+    </section>
+
+    <section id="contact" data-animate>
+        <div class="container">
+            <h3>Interested in working together?</h3>
+            <p>Available for freelance work</p>
+            <a href="#" class="btn">Let's Talk</a>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 Travel Essentials</p>
-            <p>Contact: info@travelessentials.com</p>
+            <p>&copy; 2024 Travel Essentials. All Rights Reserved</p>
         </div>
     </footer>
     <script src="currency.js"></script>
     <script src="weather.js"></script>
     <script src="timezone.js"></script>
     <script src="news.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

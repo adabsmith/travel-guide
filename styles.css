@@ -1,9 +1,10 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    color: #fff;
+    background-color: #0f0d28;
 }
 
 .container {
@@ -14,78 +15,135 @@ body {
 
 /* Header Styles */
 header {
-    background: #333;
+    background: #1e1b34;
     color: #fff;
-    padding-top: 10px;
-    min-height: 70px;
-    border-bottom: #77d9a8 3px solid;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header a {
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
 }
 
-header ul {
-    padding: 0;
-    list-style: none;
+header .btn {
+    background: #6c63ff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-header ul li {
-    display: inline;
-    padding: 0 20px 0 20px;
+header .btn:hover {
+    background: #5a54e8;
 }
 
 /* Hero Section */
 #hero {
-    background: url('background.png') no-repeat center center/cover;
-    color: #fff;
-    padding: 60px 0;
     text-align: center;
-    position: relative;
-    min-height: 400px;
+    padding: 100px 0;
 }
 
 #hero h2 {
-    font-size: 50px;
-    margin-bottom: 10px;
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
 #hero p {
-    display: flex;
-    font-size: 15px;
-    margin-bottom: 20px;
-    width: 70%;
-    align-content: center;
-    margin-left: 15%;
+    font-size: 16px;
+    margin-bottom: 40px;
 }
 
-#hero .btn {
-    background: #fff;
-    color: #333;
+/* Info Sections */
+.info-section {
+    background: #1e1b34;
+    padding: 50px 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.info-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.info-section .btn {
+    background: #6c63ff;
+    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    margin: 5px;
 }
 
-#hero .btn:hover {
-    background: #444;
-    color: #fff;
+.info-section .btn:hover {
+    background: #5a54e8;
 }
 
-/* Section Styles */
-section {
-    padding: 20px 0;
-    border-bottom: 1px solid #ccc;
+/* Timezone Cards Styles */
+.timezone-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
-section h2 {
+.timezone-card {
+    background: #29284c;
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    max-width: 200px;
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 30px;
+    flex: 1 1 calc(25% - 16px);
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.timezone-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timezone-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.timezone-duration {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.timezone-duration span {
+    font-size: 1.5em;
+    color: #a0a0a0;
 }
 
 /* Form Styles */
@@ -101,10 +159,13 @@ form label {
     font-weight: bold;
 }
 
-form input, form select, form button {
+form input, form select {
     margin-bottom: 10px;
     padding: 10px;
     font-size: 16px;
+    height: 37px; /* Set the height of input fields to match the buttons */
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 form button.btn {
@@ -113,88 +174,32 @@ form button.btn {
     border: none;
     cursor: pointer;
     transition: background 0.3s;
+    height: 37px; /* Ensure buttons are the same height */
 }
 
 form button.btn:hover {
     background: #444;
 }
 
-/* Results Styles */
-#currencyResult, #weatherResult, #timezoneResult {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 20px;
-}
-
-ul {
-    padding: 0;
-    list-style: none;
-}
-
-ul li {
-    font-size: 20px;
-    margin: 5px 0;
-}
-
-/* Footer Styles */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-.article {
-    border: 1px solid #ddd;
-    padding: 16px;
-    margin-bottom: 16px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.article h3 {
-    margin-top: 0;
-}
-
-.article img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 8px;
-}
-
-.article p {
-    margin-bottom: 8px;
-}
-
-.article a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.article a:hover {
-    text-decoration: underline;
-}
-/* Add these styles to your existing styles.css file */
-
+/* News Cards Styles */
 .news-container {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .news-card {
-    border: 1px solid #ddd;
-    padding: 16px;
-    margin-bottom: 16px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    background: #29284c;
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    max-width: 200px;
+    text-align: center;
     flex: 1 1 calc(25% - 16px);
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    margin-bottom: 16px;
 }
 
 .news-card h3 {
@@ -221,133 +226,136 @@ footer {
     text-decoration: underline;
 }
 
-.weather-card {
-    background: linear-gradient(135deg, #89fffd 0%, #7af74d 100%);
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    max-width: 300px;
-    margin: 20px auto;
-    position: relative;
-}
-
-.weather-info {
-    position: relative;
-}
-
-.weather-location {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.weather-icon img {
-    width: 80px;
-    height: 80px;
-}
-
-.weather-temp {
-    font-size: 2.5em;
-    margin: 10px 0;
-}
-
-.weather-date, .weather-time {
-    font-size: 1em;
-    margin-top: 5px;
-}
-
-.weather-temp-unit {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.weather-temp-unit button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
-.weather-temp-unit button:hover {
-    opacity: 0.7;
-}
-
-
-/* Add these styles to your existing styles.css file */
-
-.timezone-card {
-    background: #1a1b27;
-    border-radius: 12px;
-    padding: 20px;
-    color: white;
-    max-width: 200px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.timezone-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.timezone-icon {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.timezone-duration {
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.timezone-duration span {
-    font-size: 1.5em;
-    color: #a0a0a0;
-}
-
-/* Timezone Cards Styles */
-.timezone-cards-container {
+/* Case Studies */
+#case-studies .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 20px;
     justify-content: space-around;
     margin-top: 20px;
 }
 
-.timezone-card {
-    background: #1a1b27;
-    border-radius: 12px;
+.case-study {
+    background: #29284c;
     padding: 20px;
-    color: white;
-    max-width: 200px;
+    border-radius: 10px;
     text-align: center;
-    flex: 1 1 calc(25% - 16px);
-    box-sizing: border-box;
-    margin-bottom: 16px;
+    flex: 1 1 calc(45% - 20px);
 }
 
-.timezone-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.case-study img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
-.timezone-icon {
-    font-size: 2em;
+/* Awards Section */
+#awards {
+    background: #1e1b34;
+    padding: 50px 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+#awards h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#awards ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#awards ul li {
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
-.timezone-duration {
-    font-size: 2em;
-    font-weight: bold;
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 100px 0;
 }
 
-.timezone-duration span {
-    font-size: 1.5em;
-    color: #a0a0a0;
+#contact h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+#contact .btn {
+    background: #6c63ff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    height: 37px; /* Ensure buttons are the same height */
+}
+
+#contact .btn:hover {
+    background: #5a54e8;
+}
+
+/* Footer */
+footer {
+    background: #1e1b34;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animation Styles */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate].active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#hero .btn {
+    background: #6c63ff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#hero .btn:hover {
+    background: #5a54e8;
+}
+#timezone .btn:hover {
+    background: #5a54e8;
+}
+#news .btn:hover {
+    background: #5a54e8;
+}
+
+#news .btn {
+    background: #6c63ff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#timezone .btn {
+    background: #6c63ff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
 }
