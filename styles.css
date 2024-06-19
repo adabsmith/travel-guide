@@ -36,6 +36,15 @@ header nav ul {
 
 header nav ul li {
     margin-left: 20px;
+    margin-top: 25px;
+}
+
+header h2{
+    margin-right: 40px;
+}
+
+header nav ul li :hover{
+color: #5a54e8;
 }
 
 header nav ul li a {
@@ -61,6 +70,13 @@ header .btn:hover {
 #hero {
     text-align: center;
     padding: 100px 0;
+}
+#hero span{
+    font-family: "Playwrite NG Modern", cursive;
+    font-optical-sizing: auto;
+    background: -webkit-linear-gradient(#6ebdf2, #5a54e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #hero h2 {
