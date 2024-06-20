@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const pageSize = 12;
     let query = 'travel';
     let loading = false;
+    let totalArticles = 0;
+    const maxArticles = 15; // Example: Limit to 50 articles
 
     function fetchNews(query, page) {
         loading = true;
@@ -15,31 +17,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.status === 'ok') {
                     const articles = data.articles;
                     articles.forEach(article => {
-                        const articleElement = document.createElement('div');
-                        articleElement.classList.add('news-card');
+                        if (totalArticles < maxArticles) { // Check if limit reached
+                            const articleElement = document.createElement('div');
+                            articleElement.classList.add('news-card');
 
-                        const title = document.createElement('h3');
-                        title.textContent = article.title;
-                        articleElement.appendChild(title);
+                            const title = document.createElement('h3');
+                            title.textContent = article.title;
+                            articleElement.appendChild(title);
 
-                        if (article.urlToImage) {
-                            const image = document.createElement('img');
-                            image.src = article.urlToImage;
-                            image.alt = article.title;
-                            articleElement.appendChild(image);
+                            if (article.urlToImage) {
+                                const image = document.createElement('img');
+                                image.src = article.urlToImage;
+                                image.alt = article.title;
+                                articleElement.appendChild(image);
+                            }
+
+                            const description = document.createElement('p');
+                            description.textContent = article.description;
+                            articleElement.appendChild(description);
+
+                            const link = document.createElement('a');
+                            link.href = article.url;
+                            link.textContent = 'Read more';
+                            link.target = '_blank';
+                            articleElement.appendChild(link);
+
+                            newsContainer.appendChild(articleElement);
+                            totalArticles++; // Increment total articles
                         }
-
-                        const description = document.createElement('p');
-                        description.textContent = article.description;
-                        articleElement.appendChild(description);
-
-                        const link = document.createElement('a');
-                        link.href = article.url;
-                        link.textContent = 'Read more';
-                        link.target = '_blank';
-                        articleElement.appendChild(link);
-
-                        newsContainer.appendChild(articleElement);
                     });
                     loading = false;
                 } else {
@@ -63,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (query) {
             page = 1;
             newsContainer.innerHTML = ''; // Clear previous results
+            totalArticles = 0; // Reset total articles
             fetchNews(query, page);
         }
     });
