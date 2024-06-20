@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('timezoneForm');
     const result = document.getElementById('timezoneResult');
 
-    const apiKey = '3eb75b2c672c458eb10ecd09f0ee3637';
+    const apiKey = '37c476750aec4e2aaf5eb1d6cbe39d0b';
 
     // Pre-defined major cities
     const majorCities = ['London', 'Tokyo', 'Sydney'];
