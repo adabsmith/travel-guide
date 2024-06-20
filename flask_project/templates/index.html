@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Safety Info</title>
+    <link rel="stylesheet" href="/flask_project/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Country Safety Info</h1>
+        <form id="countryForm">
+            <label for="country">Enter Country Name:</label>
+            <input type="text" id="country" name="country" required>
+            <button type="submit">Check Safety</button>
+        </form>
+        <div id="results">
+            <div class="card" id="weatherCard">
+                <h2>Weather</h2>
+                <div id="weatherInfo"></div>
+            </div>
+            <div class="card" id="newsCard">
+                <h2>News</h2>
+                <div id="newsInfo"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/flask_project/static/scripts.js"></script>
+</body>
+</html>
