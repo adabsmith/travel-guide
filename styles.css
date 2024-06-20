@@ -178,6 +178,10 @@ header .btn:hover {
     color: #a0a0a0;
 }
 
+#timezoneResult {
+    text-align: center;
+}
+
 /* Form Styles */
 form {
     max-width: 600px;
